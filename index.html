@@ -1,300 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pamela Magallanes Camasca - Portafolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e6b60b.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Pamela Magallanes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    :root {
-      --primary: #0ea5e9;
-      --dark: #0f172a;
-      --light: #f0f4f8;
-      --text: #333;
-      --highlight: #f97316;
-    }
-    * {
-      scroll-behavior: smooth;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--light);
-      color: var(--text);
-    }
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
+    body {background-color: #f4f4f4; color: #333;}
     header {
-      background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 5rem 1rem 3rem;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-    header * {
-      position: relative;
-      z-index: 1;
-    }
-    h1 {
-      font-size: 3rem;
-    }
-    p.subtitle {
-      font-size: 1.3rem;
-      margin-top: 0.5rem;
-    }
-    section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-    }
-    section.visible {
-      opacity: 1;
-    }
-    h2 {
-      color: var(--dark);
-      margin-bottom: 1.5rem;
-      border-left: 5px solid var(--primary);
-      padding-left: 1rem;
-    }
-    h2.centered {
-      text-align: center;
-      border-left: none;
-    }
-    .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .timeline-grid {
-      display: grid;
-      grid-template-columns: 1fr 60px 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-    .timeline-col {
-      text-align: right;
-    }
-    .timeline-col.right {
-      text-align: left;
-    }
-    .timeline-icon {
-      background: var(--primary);
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
-      font-size: 1.2rem;
-    }
-    .timeline-end {
-      grid-column: 2 / span 1;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .timeline-end div {
-      background: var(--highlight);
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 50px;
-      font-weight: bold;
-      display: inline-block;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .timeline-text {
-      background: #e2e8f0;
-      padding: 1rem;
-      border-radius: 10px;
-    }
-    .projects ul {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      list-style: none;
-    }
-    .projects li {
-      background: var(--light);
-      padding: 1rem;
-      border-left: 5px solid var(--primary);
-      border-radius: 8px;
-    }
-    .dashboard-preview {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .dashboard-card {
-      width: 280px;
-      height: 180px;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
-      color: white;
-      border-radius: 12px;
+      background-image: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
+      color: white;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    .dashboard-card i {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+    header h1 {font-size: 3em; font-weight: 700;}
+    header p {font-size: 1.5em; margin-top: 10px;}
+    header nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
     }
-    .contact a {
-      color: var(--primary);
+    nav a {
+      margin-left: 15px;
+      color: white;
       text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-    footer {
+    nav a:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .bio {
       text-align: center;
-      background: #e2e8f0;
-      padding: 1rem;
-      font-size: 0.9rem;
+      margin-bottom: 40px;
     }
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    .bio p {
+      font-size: 1.2em;
+      line-height: 1.6;
     }
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #ffa500;
+      transform: translateX(-50%);
+    }
+    .event {
+      position: relative;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .event.left::before, .event.right::before {
+      content: '◉';
+      position: absolute;
+      top: 20px;
+      font-size: 20px;
+      color: #ffa500;
+    }
+    .event.left::before {
+      right: -30px;
+    }
+    .event.right::before {
+      left: -30px;
+    }
+    .cta-final {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .cta-final div {
+      background: #ffa500;
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 50%;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .visuals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .visual-box {
+      width: 300px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .visual-box:hover {transform: translateY(-5px);}
   </style>
 </head>
 <body>
   <header>
-    <h1>Pamela Magallanes Camasca</h1>
-    <p class="subtitle">Ingeniera Industrial | Analista Administrativo Financiera</p>
+    <h1>¡Bienvenido a mi perfil!</h1>
+    <p>Pamela Magallanes Camasca - Analista Administrativo Financiera</p>
+    <nav>
+      <a href="#contacto">Contáctame</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#portafolio">Portafolio</a>
+    </nav>
   </header>
 
-  <section class="card bio">
-    <h2><i class="fas fa-user"></i> Sobre mí</h2>
-    <p>
-      Analista Administrativo Financiera con experiencia en el manejo eficiente de información para mejorar procesos internos y apoyar en la toma de decisiones.
-      Especialista en el análisis de datos para reducir costos, optimizar recursos y aumentar la rentabilidad de los proyectos.
-      Habilidad para presentar resultados de forma clara y colaborar eficazmente con diferentes áreas de la empresa.
-      Comprometida, organizada y orientada a lograr resultados concretos.
+  <section class="bio" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Analista Administrativo Financiera con experiencia en el manejo eficiente de información para mejorar procesos internos y apoyar en la toma de decisiones. Especialista en el análisis de datos para reducir costos, optimizar recursos y aumentar la rentabilidad de los proyectos. Habilidad para presentar resultados de forma clara y colaborar eficazmente con diferentes áreas de la empresa. Comprometida, organizada y orientada a lograr resultados concretos.</p>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Experiencia Profesional</h2>
+    <div class="timeline">
+      <div class="event left">
+        <h3>Junio 2021 – Octubre 2021</h3>
+        <p>Practicante Pre Profesional de Procesos</p>
+      </div>
+      <div class="event right">
+        <h3>Octubre 2021 - Abril 2022</h3>
+        <p>Practicante Profesional Logística</p>
+      </div>
+      <div class="event left">
+        <h3>Abril 2022 – Noviembre 2023</h3>
+        <p>Asistente de Control Interno</p>
+      </div>
+      <div class="event right">
+        <h3>Noviembre 2023 – Actualidad</h3>
+        <p>Analista Administrativo Financiero</p>
+      </div>
+      <div class="cta-final">
+        <div>¡Sé parte de mi historia!</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Educación</h2>
+    <ul>
+      <li><strong>Bachiller en Ingeniería Industrial</strong>, Universidad Nacional del Callao (Marzo 2017 - Diciembre 2021)</li>
+      <li><strong>Diplomado en Inteligencia y Análisis de Datos</strong>, WE Educación Ejecutiva (Febrero 2023 - Junio 2023)</li>
+      <li><strong>Diplomado en Gerencia de Operaciones y Logística</strong>, UNALM (Julio 2021 - Noviembre 2021)</li>
+    </ul>
+  </section>
+
+  <section id="portafolio">
+    <h2 style="text-align:center;">Portafolio - Dashboards</h2>
+    <div class="visuals">
+      <div class="visual-box">Dashboard 1 (Próximamente)</div>
+      <div class="visual-box">Dashboard 2 (Próximamente)</div>
+      <div class="visual-box">Dashboard 3 (Próximamente)</div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2 style="text-align:center;">Contáctame</h2>
+    <p style="text-align:center;">
+      <strong>Email:</strong> pamela.camasca@gmail.com<br />
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pamela-magallanes-camasca-0b1742197/" target="_blank">Pamela Magallanes Camasca</a>
     </p>
   </section>
-
-  <section class="card projects">
-    <h2><i class="fas fa-chart-line"></i> Proyectos de Análisis de Datos</h2>
-    <div class="dashboard-preview">
-      <div class="dashboard-card">
-        <i class="fas fa-database"></i>
-        <p>Dashboard Financiero</p>
-      </div>
-      <div class="dashboard-card">
-        <i class="fas fa-box"></i>
-        <p>Análisis Logístico</p>
-      </div>
-      <div class="dashboard-card">
-        <i class="fas fa-chart-pie"></i>
-        <p>KPI de Rentabilidad</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="card timeline">
-    <h2 class="centered"><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
-    <div class="timeline-grid">
-      <div class="timeline-col">
-        <div class="timeline-text">
-          <strong>Practicante Pre Profesional de Procesos</strong><br>
-          Junio 2021 – Octubre 2021
-          - Analizar y validar la data generada para la elaboración de los reportes finales haciendo uso de herramientas estadísticas, KPI’s históricos e información financiera y operativa de la empresa.
-          -	Centralizar y revisar los reportes finales a los entes regulatorios a entidades como OSIPTEL, MTC, INEI.
-          -	Interpretar datos financieros para reconocer tendencias, patrones cambiantes y su significado en relación con indicadores clave.
-
-        </div>
-      </div>
-      <div class="timeline-icon"><i class="fas fa-circle"></i></div>
-      <div class="timeline-col right"></div>
-
-      <div class="timeline-col"></div>
-      <div class="timeline-icon"><i class="fas fa-circle"></i></div>
-      <div class="timeline-col right">
-        <div class="timeline-text">
-          <strong>Practicante Profesional Logística</strong><br>
-          Octubre 2021 – Abril 2022
-        </div>
-      </div>
-
-      <div class="timeline-col">
-        <div class="timeline-text">
-          <strong>Asistente Control Interno</strong><br>
-          Abril 2022 – Noviembre 2023
-        </div>
-      </div>
-      <div class="timeline-icon"><i class="fas fa-circle"></i></div>
-      <div class="timeline-col right"></div>
-
-      <div class="timeline-col"></div>
-      <div class="timeline-icon"><i class="fas fa-circle"></i></div>
-      <div class="timeline-col right">
-        <div class="timeline-text">
-          <strong>Analista Administrativo Financiero</strong><br>
-          Noviembre 2023 – Actualidad
-        </div>
-      </div>
-    </div>
-    <div class="timeline-end">
-      <div>¡Sé parte de mi historia!</div>
-    </div>
-  </section>
-
-  <section class="card education">
-    <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
-    <div class="edu-item">
-      <strong>Bachiller en Ingeniería Industrial</strong><br>
-      Universidad Nacional del Callao (Marzo 2017 - Diciembre 2021)
-    </div>
-    <div class="edu-item">
-      <strong>Diplomado en Inteligencia y Análisis de Datos</strong><br>
-      WE Educación Ejecutiva (Febrero 2023 – Junio 2023)
-    </div>
-    <div class="edu-item">
-      <strong>Diplomado en Gerencia de Operaciones y Logística</strong><br>
-      Universidad Nacional Agraria la Molina (Julio 2021 – Noviembre 2021)
-    </div>
-  </section>
-
-  <section class="card contact">
-    <h2><i class="fas fa-envelope"></i> Contacto</h2>
-    <p>📧 <a href="mailto:pamela.camasca@gmail.com">pamela.camasca@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/pamela-magallanes-camasca-0b1742197/" target="_blank">LinkedIn</a></p>
-  </section>
-
-  <footer>
-    © 2025 Pamela Magallanes Camasca
-  </footer>
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
