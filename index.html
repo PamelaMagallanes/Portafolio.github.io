@@ -7,29 +7,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0e6b60b.js" crossorigin="anonymous"></script>
   <style>
+    :root {
+      --primary: #0ea5e9;
+      --dark: #0f172a;
+      --light: #f0f4f8;
+      --text: #333;
+    }
     * {
       scroll-behavior: smooth;
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     body {
       font-family: 'Roboto', sans-serif;
-      margin: 0;
-      background: #f0f4f8;
-      color: #333;
+      background: var(--light);
+      color: var(--text);
     }
     header {
-      background: linear-gradient(to right, #0f172a, #334155);
+      background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       color: white;
-      padding: 3rem 1rem;
       text-align: center;
+      padding: 5rem 1rem 3rem;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    header * {
+      position: relative;
+      z-index: 1;
     }
     h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
     }
     p.subtitle {
-      font-size: 1.2rem;
-      margin-top: 0;
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
     }
     section {
       padding: 3rem 1rem;
@@ -42,15 +60,15 @@
       opacity: 1;
     }
     h2 {
-      color: #0f172a;
+      color: var(--dark);
       margin-bottom: 1.5rem;
-      border-left: 5px solid #0ea5e9;
+      border-left: 5px solid var(--primary);
       padding-left: 1rem;
     }
     .card {
       background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
+      padding: 2rem;
+      border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
       transition: transform 0.3s;
@@ -69,10 +87,45 @@
       font-weight: 900;
       position: absolute;
       left: 0;
-      color: #0ea5e9;
+      color: var(--primary);
+    }
+    .projects ul {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      list-style: none;
+    }
+    .projects li {
+      background: var(--light);
+      padding: 1rem;
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+    }
+    .dashboard-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .dashboard-card {
+      width: 280px;
+      height: 180px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .dashboard-card i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
     .contact a {
-      color: #0ea5e9;
+      color: var(--primary);
       text-decoration: none;
     }
     footer {
@@ -104,12 +157,21 @@
   </section>
 
   <section class="card projects">
-    <h2><i class="fas fa-chart-line"></i> Proyectos de Dashboards</h2>
-    <ul>
-      <li><strong>[Nombre del Proyecto 1]</strong><br><a href="#">(Próximamente)</a></li>
-      <li><strong>[Nombre del Proyecto 2]</strong><br><a href="#">(Próximamente)</a></li>
-      <li><strong>[Nombre del Proyecto 3]</strong><br><a href="#">(Próximamente)</a></li>
-    </ul>
+    <h2><i class="fas fa-chart-line"></i> Proyectos de Análisis de Datos</h2>
+    <div class="dashboard-preview">
+      <div class="dashboard-card">
+        <i class="fas fa-database"></i>
+        <p>Dashboard Financiero</p>
+      </div>
+      <div class="dashboard-card">
+        <i class="fas fa-box"></i>
+        <p>Análisis Logístico</p>
+      </div>
+      <div class="dashboard-card">
+        <i class="fas fa-chart-pie"></i>
+        <p>KPI de Rentabilidad</p>
+      </div>
+    </div>
   </section>
 
   <section class="card timeline">
