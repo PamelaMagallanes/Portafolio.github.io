@@ -2,15 +2,21 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portafolio Pamela Magallanes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
-    body {background-color: #f4f4f4; color: #333;}
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
     header {
-      background-image: url('https://images.unsplash.com/photo-1612832021585-9cc87c1f5f38?auto=format&fit=crop&w=1950&q=80');
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -21,9 +27,21 @@
       position: relative;
       color: white;
       text-align: center;
+      text-shadow: 0 0 8px rgba(0,0,0,0.7);
     }
-    header h1 {font-size: 2.5em; font-weight: 700;}
-    header h2 {font-size: 1.8em; margin-top: 10px;}
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 0.3em;
+    }
+    header h2 {
+      font-size: 1.8em;
+      margin-bottom: 0.2em;
+    }
+    header p {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
     header nav {
       position: absolute;
       top: 20px;
@@ -122,27 +140,31 @@
       transition: transform 0.3s;
       text-align: center;
     }
-    .visual-box:hover {transform: translateY(-5px);}
+    .visual-box:hover {
+      transform: translateY(-5px);
+    }
+    .visual-box i {
+      font-size: 3em;
+      color: #ffa500;
+      margin-bottom: 10px;
+    }
     .education li {
       margin: 15px 0;
       font-size: 1.1em;
+      list-style: none;
+      position: relative;
+      padding-left: 30px;
     }
     .education li::before {
-      content: '\f201';
+      content: '\\f201';
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
-      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
       color: #ffa500;
-    }
-    .visual-box a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      color: #ffa500;
-      font-weight: bold;
-    }
-    .visual-box a:hover {
-      text-decoration: underline;
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -201,11 +223,20 @@
     <h2 style="text-align:center;">Portafolio - Dashboards</h2>
     <div class="visuals">
       <div class="visual-box">
-        <p>Dashboard de Control Interno</p>
-        <a href="https://lookerstudio.google.com/u/0/reporting/ab9cb2c7-527f-4c11-8ac4-84a2c06c9186/page/p_yij8w5owid" target="_blank">Ver Dashboard</a>
+        <i class="fas fa-chart-line"></i>
+        <h3>Dashboard 1</h3>
+        <p>(Próximamente)</p>
       </div>
-      <div class="visual-box">Dashboard 2 (Próximamente)</div>
-      <div class="visual-box">Dashboard 3 (Próximamente)</div>
+      <div class="visual-box">
+        <i class="fas fa-chart-pie"></i>
+        <h3>Dashboard 2</h3>
+        <p>(Próximamente)</p>
+      </div>
+      <div class="visual-box">
+        <i class="fas fa-table"></i>
+        <h3>Dashboard 3</h3>
+        <p>(Próximamente)</p>
+      </div>
     </div>
   </section>
 
