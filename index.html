@@ -4,65 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pamela Magallanes Camasca - Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6b60b.js" crossorigin="anonymous"></script>
   <style>
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
+      background: #f0f4f8;
       color: #333;
     }
     header {
-      background-color: #1e293b;
+      background: linear-gradient(to right, #0f172a, #334155);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
     h1 {
+      font-size: 2.8rem;
       margin-bottom: 0.5rem;
     }
-    .section {
-      padding: 2rem 1.5rem;
-      max-width: 900px;
+    p.subtitle {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
       margin: auto;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
     }
-    .section h2 {
-      color: #1e293b;
-      margin-bottom: 1rem;
+    section.visible {
+      opacity: 1;
     }
-    .projects ul {
-      list-style: none;
-      padding-left: 0;
+    h2 {
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #0ea5e9;
+      padding-left: 1rem;
     }
-    .projects li {
-      margin-bottom: 1rem;
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      transition: transform 0.3s;
     }
-    .projects a {
-      color: #0d6efd;
-      text-decoration: none;
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .timeline-item, .edu-item {
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+    .timeline-item::before, .edu-item::before {
+      content: '\f111';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #0ea5e9;
     }
     .contact a {
-      color: #1e40af;
+      color: #0ea5e9;
       text-decoration: none;
     }
     footer {
       text-align: center;
+      background: #e2e8f0;
       padding: 1rem;
-      background-color: #e5e7eb;
-      color: #555;
-      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Pamela Magallanes Camasca</h1>
-    <p>Ingeniera Industrial | Analista Administrativo Financiera</p>
+    <p class="subtitle">Ingeniera Industrial | Analista Administrativo Financiera</p>
   </header>
 
-  <section class="section bio">
-    <h2>Sobre mí</h2>
+  <section class="card bio">
+    <h2><i class="fas fa-user"></i> Sobre mí</h2>
     <p>
       Analista Administrativo Financiera con experiencia en el manejo eficiente de información para mejorar procesos internos y apoyar en la toma de decisiones.
       Especialista en el análisis de datos para reducir costos, optimizar recursos y aumentar la rentabilidad de los proyectos.
@@ -71,7 +103,73 @@
     </p>
   </section>
 
-  <section class="section projects">
-    <h2>Proyectos de Dashboards</h2>
+  <section class="card projects">
+    <h2><i class="fas fa-chart-line"></i> Proyectos de Dashboards</h2>
     <ul>
-      <li><strong>[Nombre del Proyec]()
+      <li><strong>[Nombre del Proyecto 1]</strong><br><a href="#">(Próximamente)</a></li>
+      <li><strong>[Nombre del Proyecto 2]</strong><br><a href="#">(Próximamente)</a></li>
+      <li><strong>[Nombre del Proyecto 3]</strong><br><a href="#">(Próximamente)</a></li>
+    </ul>
+  </section>
+
+  <section class="card timeline">
+    <h2><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
+    <div class="timeline-item">
+      <strong>Analista Administrativo Financiero</strong><br>
+      Noviembre 2023 – Actualidad
+    </div>
+    <div class="timeline-item">
+      <strong>Asistente Control Interno</strong><br>
+      Abril 2022 – Noviembre 2023
+    </div>
+    <div class="timeline-item">
+      <strong>Practicante Profesional Logística</strong><br>
+      Octubre 2021 – Abril 2022
+    </div>
+    <div class="timeline-item">
+      <strong>Practicante Pre Profesional de Procesos</strong><br>
+      Junio 2021 – Octubre 2021
+    </div>
+  </section>
+
+  <section class="card education">
+    <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
+    <div class="edu-item">
+      <strong>Bachiller en Ingeniería Industrial</strong><br>
+      Universidad Nacional del Callao (Marzo 2017 - Diciembre 2021)
+    </div>
+    <div class="edu-item">
+      <strong>Diplomado en Inteligencia y Análisis de Datos</strong><br>
+      WE Educación Ejecutiva (Febrero 2023 – Junio 2023)
+    </div>
+    <div class="edu-item">
+      <strong>Diplomado en Gerencia de Operaciones y Logística</strong><br>
+      Universidad Nacional Agraria la Molina (Julio 2021 – Noviembre 2021)
+    </div>
+  </section>
+
+  <section class="card contact">
+    <h2><i class="fas fa-envelope"></i> Contacto</h2>
+    <p>📧 <a href="mailto:pamela.camasca@gmail.com">pamela.camasca@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/pamela-magallanes-camasca-0b1742197/" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <footer>
+    © 2025 Pamela Magallanes Camasca
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
