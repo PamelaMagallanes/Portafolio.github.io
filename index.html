@@ -10,7 +10,7 @@
     * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
     body {background-color: #f4f4f4; color: #333;}
     header {
-      background-image: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1950&q=80');
+      background-image: url('https://images.unsplash.com/photo-1612832021585-9cc87c1f5f38?auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -22,8 +22,8 @@
       color: white;
       text-align: center;
     }
-    header h1 {font-size: 3em; font-weight: 700;}
-    header p {font-size: 1.5em; margin-top: 10px;}
+    header h1 {font-size: 2.5em; font-weight: 700;}
+    header h2 {font-size: 1.8em; margin-top: 10px;}
     header nav {
       position: absolute;
       top: 20px;
@@ -120,14 +120,37 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
+      text-align: center;
     }
     .visual-box:hover {transform: translateY(-5px);}
+    .education li {
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+    .education li::before {
+      content: '\f201';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-right: 10px;
+      color: #ffa500;
+    }
+    .visual-box a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #ffa500;
+      font-weight: bold;
+    }
+    .visual-box a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>¡Bienvenido a mi perfil!</h1>
-    <p>Pamela Magallanes Camasca - Analista Administrativo Financiera</p>
+    <h2>Pamela Magallanes Camasca</h2>
+    <p>Analista Administrativo Financiera</p>
     <nav>
       <a href="#contacto">Contáctame</a>
       <a href="#sobre-mi">Sobre mí</a>
@@ -167,7 +190,7 @@
 
   <section>
     <h2 style="text-align:center;">Educación</h2>
-    <ul>
+    <ul class="education">
       <li><strong>Bachiller en Ingeniería Industrial</strong>, Universidad Nacional del Callao (Marzo 2017 - Diciembre 2021)</li>
       <li><strong>Diplomado en Inteligencia y Análisis de Datos</strong>, WE Educación Ejecutiva (Febrero 2023 - Junio 2023)</li>
       <li><strong>Diplomado en Gerencia de Operaciones y Logística</strong>, UNALM (Julio 2021 - Noviembre 2021)</li>
@@ -177,7 +200,10 @@
   <section id="portafolio">
     <h2 style="text-align:center;">Portafolio - Dashboards</h2>
     <div class="visuals">
-      <div class="visual-box">Dashboard 1 (Próximamente)</div>
+      <div class="visual-box">
+        <p>Dashboard de Control Interno</p>
+        <a href="https://lookerstudio.google.com/u/0/reporting/ab9cb2c7-527f-4c11-8ac4-84a2c06c9186/page/p_yij8w5owid" target="_blank">Ver Dashboard</a>
+      </div>
       <div class="visual-box">Dashboard 2 (Próximamente)</div>
       <div class="visual-box">Dashboard 3 (Próximamente)</div>
     </div>
